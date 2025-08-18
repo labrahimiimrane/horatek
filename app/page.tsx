@@ -9,7 +9,7 @@ export default function HoratekHomePage() {
 
   const stats = [
     { number: "15+", label: "Années d'expérience" },
-    { number: "500+", label: "Clients satisfaits" },
+    { number: "100%", label: "Clients satisfaits" },
     { number: "24/7", label: "Support technique" },
     { number: "2", label: "Pays d'intervention" },
   ]
