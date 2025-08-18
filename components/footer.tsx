@@ -1,4 +1,6 @@
+import Link from "next/link"
 import { Mail, Clock, Globe } from "lucide-react"
+
 
 export function Footer() {
   return (
@@ -23,7 +25,20 @@ export function Footer() {
             </div>
           </div>
           <div className="border-t border-blue-500 mt-4 pt-4 text-center">
-            <p className="text-blue-100 text-sm">Copyright © 2025 HORA TEK. Tous droits réservés.</p>
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="flex items-center mb-4 md:mb-0 gap-2">
+                <Link href="/mentions-legales" className="text-blue-100 text-sm hover:text-blue-300 transition-colors duration-300">
+                  Mentions légales
+                </Link>
+                -
+                <Link href="/politique-confidentialite" className="text-blue-100 text-sm hover:text-blue-300 transition-colors duration-300">
+                  Politique de confidentialité
+                </Link>
+              </div>
+              <div className="flex items-center space-x-6">
+                <p className="text-blue-100 text-sm">Copyright © 2025 HORA TEK. Tous droits réservés.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

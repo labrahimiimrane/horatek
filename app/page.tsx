@@ -239,7 +239,7 @@ export default function HoratekHomePage() {
         </div>
       </section>
 
-            {/* CTA Section */}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Prêt à sécuriser votre entreprise ?</h2>
