@@ -3,6 +3,8 @@ import Link from "next/link"
 import { ArrowRight, Star } from "lucide-react" 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export default function HoratekHomePage() {
 
@@ -42,6 +44,8 @@ export default function HoratekHomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+      <Navigation />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -252,6 +256,8 @@ export default function HoratekHomePage() {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export default function ReferencesPage() {
 
@@ -250,6 +252,8 @@ export default function ReferencesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+        <Navigation />
+
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-indigo-800 text-white">
             <div className="container mx-auto px-4 py-20">
@@ -343,6 +347,8 @@ export default function ReferencesPage() {
             </div>
             </div>
         </section>
+
+        <Footer />
     </div>
   )
 }

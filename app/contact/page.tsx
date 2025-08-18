@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import Link from "next/link"
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -9,7 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Send } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -33,6 +34,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+        <Navigation />
+
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-800 to-blue-600 text-white">
             <div className="container mx-auto px-4 py-20">
@@ -104,20 +107,20 @@ export default function ContactPage() {
                                 </div>
 
                                 <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Service souhaité *</label>
-                                <Select onValueChange={(value) => handleChange("service", value)}>
-                                    <SelectTrigger>
-                                    <SelectValue placeholder="Sélectionnez un service" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                    <SelectItem value="gestion-temps">Gestion des Temps</SelectItem>
-                                    <SelectItem value="controle-acces">Contrôle d'Accès</SelectItem>
-                                    <SelectItem value="anti-vol">Systèmes Anti-Vol</SelectItem>
-                                    <SelectItem value="domotique">Solutions Domotiques</SelectItem>
-                                    <SelectItem value="integration">Intégration Complète</SelectItem>
-                                    <SelectItem value="maintenance">Maintenance & Support</SelectItem>
-                                    </SelectContent>
-                                </Select>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Service souhaité *</label>
+                                    <Select onValueChange={(value) => handleChange("service", value)}>
+                                        <SelectTrigger className="w-full">
+                                            <SelectValue placeholder="Sélectionnez un service" />
+                                        </SelectTrigger>
+                                        <SelectContent className="w-full">
+                                            <SelectItem value="gestion-temps">Gestion des Temps</SelectItem>
+                                            <SelectItem value="controle-acces">Contrôle d'Accès</SelectItem>
+                                            <SelectItem value="anti-vol">Systèmes Anti-Vol</SelectItem>
+                                            <SelectItem value="domotique">Solutions Domotiques</SelectItem>
+                                            <SelectItem value="integration">Intégration Complète</SelectItem>
+                                            <SelectItem value="maintenance">Maintenance & Support</SelectItem>
+                                        </SelectContent>
+                                    </Select>
                                 </div>
 
                                 <div>
@@ -234,6 +237,8 @@ export default function ContactPage() {
                 </div>  
             </div>   
         </main>
+
+        <Footer />
     </div>
   )
 }

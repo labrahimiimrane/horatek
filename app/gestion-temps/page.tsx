@@ -4,11 +4,14 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 
 export default function GestionTempsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white">
@@ -251,6 +254,8 @@ export default function GestionTempsPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
 
     </div>
   )
