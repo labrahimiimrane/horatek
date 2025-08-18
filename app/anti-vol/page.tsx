@@ -34,7 +34,7 @@ export default function AntiVolPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/anti-theft.png"
+                src="/images/access-control.png"
                 alt="Système anti-vol HORA TEK"
                 width={800}
                 height={600}

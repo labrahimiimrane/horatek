@@ -34,7 +34,7 @@ export default function DomotiquePage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/smart-building.png"
+                src="/images/access-control.png"
                 alt="Solutions domotiques HORA TEK"
                 width={800}
                 height={600}

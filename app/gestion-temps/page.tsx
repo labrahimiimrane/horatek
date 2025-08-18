@@ -38,7 +38,7 @@ export default function GestionTempsPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/time.png"
+                src="/images/access-control.png"
                 alt="Système de gestion des temps HORA TEK"
                 width={800}
                 height={600}

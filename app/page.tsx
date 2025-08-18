@@ -74,7 +74,7 @@ export default function HoratekHomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/solutions.png"
+                src="/images/access-control.png"
                 alt="Solutions de sécurité HORA TEK"
                 width={800}
                 height={600}
