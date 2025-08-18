@@ -2,11 +2,46 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function HoratekHomePage() {
+
+
+  const stats = [
+    { number: "15+", label: "Années d'expérience" },
+    { number: "500+", label: "Clients satisfaits" },
+    { number: "24/7", label: "Support technique" },
+    { number: "2", label: "Pays d'intervention" },
+  ]
+
+  const testimonials = [
+    {
+      name: "Mohammed Alami",
+      company: "Directeur, Société Industrielle",
+      content:
+        "HORA TEK a transformé notre gestion du personnel. Le système de pointage biométrique a éliminé tous les problèmes de fraude horaire.",
+      rating: 5,
+    },
+    {
+      name: "Sarah Benali",
+      company: "Responsable RH, Groupe Commercial",
+      content:
+        "Installation rapide et formation complète. L'équipe HORA TEK est très professionnelle et le support technique excellent.",
+      rating: 5,
+    },
+    {
+      name: "Ahmed Tazi",
+      company: "Gérant, Centre Logistique",
+      content:
+        "Le système de contrôle d'accès sécurise parfaitement nos entrepôts. Nous recommandons vivement HORA TEK.",
+      rating: 5,
+    },
+  ]
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       <Navigation />
@@ -55,7 +90,7 @@ export default function HoratekHomePage() {
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Services Section */}
       <main className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content Column */}
@@ -163,6 +198,32 @@ export default function HoratekHomePage() {
         </div>
       </main>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Témoignages Clients</h2>
+            <p className="text-xl text-gray-600">Ce que disent nos clients de nos services</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-2xl p-8">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-gray-600 text-sm">{testimonial.company}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
