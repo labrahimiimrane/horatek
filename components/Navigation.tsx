@@ -34,7 +34,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -54,15 +54,16 @@ export function Navigation() {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden">
             <div className="fixed inset-0 z-50 bg-blue-600/50 backdrop-blur-[5px]" onClick={() => setIsOpen(false)} />
-            <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300">
+            <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 flex flex-col">
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between p-6 border-b">
                 {/* Logo */}
-                <Link href="/" className="flex items-center">
+                <Link href="/" className="flex items-center space-x-3">
                   <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-full font-bold text-xl tracking-wide">
                     HORA TEK
                   </div>
@@ -73,10 +74,10 @@ export function Navigation() {
               </div>
 
               {/* Mobile Menu Items */}
-              <div className="py-6">
+              <div className="flex-1 overflow-y-auto py-6 pb-50">
                 {navItems.map((item, index) => (
                   <Link
-                    key={item.href}
+                    key={item.index}
                     href={item.href}
                     className="flex items-center px-6 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-l-4 border-transparent hover:border-blue-600"
                     onClick={() => setIsOpen(false)}
