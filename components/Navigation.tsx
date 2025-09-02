@@ -35,9 +35,9 @@ export function Navigation() {
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <Link
-                key={item.href}
+                key={item.index}
                 href={item.href}
                 className={cn(
                   "px-4 py-2 rounded-lg transition-colors text-sm font-medium",
