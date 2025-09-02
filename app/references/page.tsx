@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
+import { Navigation } from "@/components/Navigation"
+import { Footer } from "@/components/Footer"
 
 export default function ReferencesPage() {
 
