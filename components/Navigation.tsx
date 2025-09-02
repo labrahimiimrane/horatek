@@ -37,7 +37,7 @@ export function Navigation() {
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <Link
-                key={item.index}
+                key={index}
                 href={item.href}
                 className={cn(
                   "px-4 py-2 rounded-lg transition-colors text-sm font-medium",
@@ -77,7 +77,7 @@ export function Navigation() {
               <div className="flex-1 overflow-y-auto py-6 pb-50">
                 {navItems.map((item, index) => (
                   <Link
-                    key={item.index}
+                    key={index}
                     href={item.href}
                     className="flex items-center px-6 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-l-4 border-transparent hover:border-blue-600"
                     onClick={() => setIsOpen(false)}
