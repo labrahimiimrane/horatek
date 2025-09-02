@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 const navItems = [
   { href: "/", label: "À PROPOS" },
   { href: "/gestion-temps", label: "GESTION DES TEMPS" },
-  { href: "/controle-acces", label: "CONTROLE D'ACCES SECURITAIRE" },
+  { href: "/controle-acces", label: "CONTROLE D ACCES SECURITAIRE" },
   { href: "/anti-vol", label: "ANTI VOL" },
   { href: "/domotique", label: "DOMOTIQUE" },
   { href: "/references", label: "REFERENCES" },
