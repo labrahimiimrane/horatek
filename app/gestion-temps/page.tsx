@@ -4,8 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
+
+import Navigation from "../../components/Navigation"
+import Footer from "../../components/Footer"
 
 
 export default function GestionTempsPage() {

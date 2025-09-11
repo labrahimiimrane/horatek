@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Scale, Building, User, Phone } from "lucide-react"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
+
+import Navigation from "../../components/Navigation"
+import Footer from "../../components/Footer"
 
 export default function MentionsLegalesPage() {
   return (
