@@ -18,7 +18,7 @@ const navItems = [
   { href: "/contact", label: "CONTACT" },
 ]
 
-export function Navigation() {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 

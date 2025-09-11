@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Mail, Clock, Globe } from "lucide-react"
 
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-white border-t-4 border-blue-600">
       {/* Bottom Section */}
