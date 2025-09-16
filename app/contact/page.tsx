@@ -57,7 +57,7 @@ export default function ContactPage() {
                 {/* Main Content Column */}  
                 <div className="lg:col-span-2">
                     {/* Contact Form */}
-                    <div className="lg:col-span-2 mb-8">
+                    <div className="lg:col-span-2 mb-8 static md:sticky md:top-[100px]  h-[max-content]">
                         <Card className="shadow-xl border-0">
                             <CardContent className="p-8">
                             <h2 className="text-3xl font-bold text-gray-800 mb-6">Demande de Devis Gratuit</h2>
@@ -143,9 +143,12 @@ export default function ContactPage() {
                             </CardContent>
                         </Card>
                     </div>
+                </div>
 
+                {/* Sidebar */}
+                <div className="lg:col-span-1">
                     {/* Contact Details */}
-                    <Card className="shadow-lg border-0">
+                    <Card className="shadow-lg border-0 mb-8">
                         <CardContent className="p-8">
                             <h3 className="text-xl font-bold text-gray-800 mb-6">Informations de Contact</h3>
                             <div className="flex flex-wrap gap-8 justify-between">
@@ -195,10 +198,7 @@ export default function ContactPage() {
                             </div>
                         </CardContent>
                     </Card>
-                </div>
 
-                {/* Sidebar */}
-                <div className="lg:col-span-1 static md:sticky md:top-[100px]  h-[max-content]">
                     {/* Quick Response */}
                     <Card className="shadow-lg border-0 bg-gradient-to-br from-blue-50 to-indigo-50 mb-8">
                         <CardContent className="p-6">
